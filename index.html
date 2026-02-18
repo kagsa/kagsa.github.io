@@ -1,230 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!--NEEDEDIT-->
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
-  <link href="https://www.kagsa.org/favicon.png" rel="icon" />
-  <title>Welcome To KAGSA.ORG</title>
-
-
-  <script>
-    const auto_typing = (id,text,speed) =>  {
-        var i = 0;
-
-        function typeWriter() {
-            if (i < text.length) {
-                document.getElementById(id).innerHTML += text.charAt(i);
-                i++;
-                setTimeout(typeWriter, speed);
-            }
-        }
-        typeWriter()
-        return 'done';
-    }
-    var getPyPi = (id) => {
-      var page = '';
-      var xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            page = xhttp.responseText;
-          }
-      };
-      xhttp.open("GET", "https://pypistats.org/packages/kagsa", true);
-      xhttp.send();
-      downloads = parseInt(page.match(`Downloads last month:
-([0-9]*)`)[1]);
-      function getpypi () {
-        let i = 0;
-        while (i>downloads) {
-          document.getElementById(id).innerHTML = toString(i)
-          i+=1;
-          setTimeout(getpypi,70);
-
-        }
-        document.getElementById(id).innerHTML = downloads;
-      }
-    }
-  </script>
-  <!-- SEO Meta
-  ============================== -->
-  <!--NEEDEDIT-->
-  <meta name="keywords" content="kagsa.org, kagsa org, Kagsa, KAGSA, kagsa, kagsa programming language,kagsa lang, kg lang, Interpreted programming language,  kg, .kg, KG, .KG, kg extention">
-  <meta name="description" content="The official website of the KAGSA Programming Language">
-  <meta property="og:title" content="Welcome To KAGSA.ORG">
-  <meta property="og:image" content="https://www.kagsa.org/social.png">
-  <meta property="og:description" content="The official website of the KAGSA Programming Language">
-  <!-- Stylesheet
-  ============================== -->
-  <link rel="stylesheet" type="text/css" href="download/assets/vendor/bootstrap/css/bootstrap.min.css" />
-  <link rel="stylesheet" type="text/css" href="download/assets/vendor/font-awesome/css/all.min.css" />
-  <link rel="stylesheet" type="text/css" href="download/assets/vendor/magnific-popup/magnific-popup.min.css" />
-  <link rel="stylesheet" type="text/css" href="download/assets/vendor/highlight.js/styles/github.css" />
-  <link rel="stylesheet" type="text/css" href="download/assets/css/stylesheet.css" />
-  <link rel="stylesheet" href="prism.css">
-  <script src="prism.js"></script>
-</head>
-
-<body data-spy="scroll" data-target=".idocs-navigation" data-offset="125" id="body">
-
-<!-- Preloader -->
-<div class="preloader">
-  <div class="lds-ellipsis">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-</div>
-<!-- Preloader End --> 
-
-<!-- Document Wrapper   
-=============================== -->
-<div id="main-wrapper"> 
-  
-  <!-- Header
-  ============================ -->
-  <header id="header" class="sticky-top"> 
-    <!-- Navbar -->
-    <nav class="primary-menu navbar navbar-expand-lg bg-dark navbar-text-light navbar-dropdown-dark border-0">
-      <div class="container-fluid">
-        <!-- Sidebar Toggler -->
-		<button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
-		
-		<!-- Logo -->
-        <a class="logo ml-md-3" href="https://www.kagsa.org/" title="KAGSA Programming Language"> <img src="download/assets/logo.png" height="60" alt="KAGSA"/> </a> 
-        <!-- Logo End -->
-        
-		<!-- Navbar Toggler -->
-		<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#header-nav"><span></span><span></span><span></span></button>
-        
-		<div id="header-nav" class="collapse navbar-collapse justify-content-end">
-          <ul class="navbar-nav">
-            <li><a target="_blank" href="https://www.kagsa.org/download/">Download</a></li>
-            <li><a target="_blank" href="https://www.kagsa.org/docs/index.html">Documents</a></li>
-            
-            <link rel="stylesheet" href="file.css">
-            <li class="nav-item nav-item-dropdown">
-              <a class="dropdown-trigger" id="social-text" href="#">Social</a>
-              <ul class="dropdown-menu">
-                <li class="dropdown-menu-item">
-                  <a href="https://www.instagram.com/kagsa_org"><img src="ig.png" class="sm-ico">&ensp; Instagram</a>
-                </li>
-                <li class="dropdown-menu-item">
-                  <a href="https://www.twitter.com/kagsa_org"><img src="tw.svg" class="sm-ico">&ensp; Twitter</a>
-                </li>
-                <li class="dropdown-menu-item">
-                  <a href="https://discord.gg/q6ZmHU6DpM"><img src="dc.png" class="sm-ico">&ensp; Discord</a>
-                </li>
-                <li class="dropdown-menu-item">
-                  <a href="mailto:admin@kagsa.org"><img src="ml.png" class="sm-ico">&ensp; Email</a>
-                </li>
-              </ul>
-            </li>
-
-            <li class="social-icons-twitter"><a data-toggle="tooltip"  href="http://github.com/kagsa/kagsa" target="_blank" title="" data-original-title="GitHub"><i> <img src="https://github.githubassets.com/favicons/favicon-dark.svg" alt="GitHub"> </i></a></li>
-          </ul>
-        </div>
-        <ul class="social-icons social-icons-sm ml-lg-2 mr-2">
-          
-        </ul>
-      </div>
-    </nav>
-    <!-- Navbar End --> 
-  </header>
-  <!-- Header End --> 
-  
-  <!-- Content
-  ============================ -->
-  <div id="content" role="main">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     
-    <!-- Docs Content
-	============================ -->
-  <br>
-
-    <div id="img-box">
-      <img src="download/assets/bird.jpg" id="bird" alt="Hummingbird Image :)">
-      <div id="welcome-to-kagsa-org"></div>
-    </div>
-    <div class="idocs-content" style="margin-left: 0;">
-      <div class="container"> 
-        <br>
-        <script>setTimeout(()=>{ auto_typing('welcome-to-kagsa-org', 'Welcome To KAGSA.ORG',70)},900);</script>
-
-        <!--Code Start-->
-        <div style="position: relative;text-align: center;">
-          <pre id="code-pre"><code class="language-lua">write 'Launching...';
-if kagsa.org.ok() {
-  write 'KAGSA.ORG has been triggered\n';
-  write 'Continue browsing';
-}
-else{
-  write 'Maybe a small problem ..!';
-}</code></pre>
-          <!--Code End-->
-          <!--Terminal Start-->
-          <div id="terminal">
-              <br>&emsp;C:\Users\owner>kagsa welcome.kg <br>
-              <span id="ss1">&emsp;</span><br>
-              <span id="ss2">&emsp;</span><br>
-              <span id="ss3">&emsp;</span>
-          </div>
-          <!--Terminal End-->
-          <script>
-            setTimeout(()=>{ auto_typing('ss1','Launching...',50)}, 900)
-            setTimeout(()=>{ auto_typing('ss2','KAGSA.ORG has been triggered',50)}, ('Launching...'.length*50+300+900))
-            setTimeout(()=>{ auto_typing('ss3','Continue browsing',50)}, ('KAGSA.ORG has been triggered'.length*50+300+900 + ('Launching...'.length*50+300)))
-          </script>
-        </div>
-
-        <div id="br-s">
-          <br><br><br><br><br><br><br><br><br><br>
-        </div><br>
-        <h2>Download</h2>
-        <hr>
-        <li><a href="https://github.com/kagsa/kagsa/releases/download/1.2.0/kagsa-win-1.2.0.zip">KAGSA 1.2.0 for Windows (11 MB)</a></li>
-        <li><a href="https://github.com/kagsa/kagsa/releases/download/1.2.0/kagsa-linux-1.2.0.zip">KAGSA 1.2.0 for Linux (7.69 MB)</a></li>
-        <li><a href="https://github.com/kagsa/kagsa/releases/download/1.2.0/kagsa-termux-1.2.0.zip">KAGSA 1.2.0 for Termux  (8.15 MB)</a></li>
-        <li><a href="https://github.com/kagsa/kagsa/releases/download/1.2.0/kagsa-macos-1.2.0.zip">KAGSA 1.2.0 for MacOS  (18.2 MB)</a></li>
-        <li><a href="https://pypi.org/project/kagsa/">KAGSA 1.2.0 from PyPi</a></li>
-        <li><a href="https://github.com/kagsa/kagsa/archive/refs/tags/1.2.0.zip">Source code (zip)</a></li>
-        <li><a href="https://github.com/kagsa/kagsa/archive/refs/tags/1.2.0.tar.gz">Source code (tar.gz)</a></li>
-        <br>
-        <p>All the Releases ? <a href="https://www.kagsa.org/download/">Here</a></p>
-        <br>
-    </div>
-  </div>
-  <!-- Content end --> 
-
-  <!-- Footer
-  ============================ -->
-  <footer id="footer" class="section bg-dark footer-text-light" style="width: 100%;margin-left: 0;">
-    <div class="container">
-      <p class="text-center">KAGSA Programming Language - www.kagsa.org</p>
-      <p class="text-center">Copyright &copy; 2020 <a href="http://www.harnishdesign.net/idocs-one-page-documentation-html-template/">iDocs</a>. All Rights Reserved.</p>
-	    <p class="text-2 text-center mb-0">Template by <a target="_blank" href="http://www.harnishdesign.net/">HarnishDesign</a>.</p>
-  </div>
-  </footer>
-  <!-- Footer end -->
-  
-</div>
-<!-- Document Wrapper end --> 
-
-<!-- Back To Top --> 
-<a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a> 
-
-<!-- JavaScript
-============================ -->
-<script src="download/assets/vendor/jquery/jquery.min.js"></script> 
-<script src="download/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
-<!-- Highlight JS -->
-<script src="download/assets/vendor/highlight.js/highlight.min.js"></script> 
-<!-- Easing --> 
-<script src="download/assets/vendor/jquery.easing/jquery.easing.min.js"></script> 
-<!-- Magnific Popup --> 
-<script src="download/assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script> 
-<!-- Custom Script -->
-<script src="download/assets/js/theme.js"></script>
-</body>
+    <title>KAGSA Programming Language</title>
+    <meta name="description" content="KAGSA - A modern programming language for the future. Simple, fast, and elegant." />
+    
+    <meta property="og:title" content="KAGSA Programming Language" />
+    <meta property="og:description" content="KAGSA - A modern programming language for the future. Simple, fast, and elegant." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/assets/kagsa-logo.png" />
+    
+    <link rel="icon" type="image/png" href="/assets/kagsa-logo.png" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/assets/index-eKxB2Fqa.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Bkbd555G.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>
